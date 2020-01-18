@@ -83,31 +83,26 @@ class _VisualizarTicketsState extends State<VisualizarTickets> {
               Padding(
                 padding: EdgeInsets.fromLTRB(10.0, 110.0, 10.0, 0.0),
                 child: Container(
-                   height: MediaQuery.of(context).size.height / 1.7,
-                   
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                          
-                          image: AssetImage(
-                            'assets/images/fondot.png',
-                           
-                          ),
-                          
-                          ),
-                          
-                          ),
-                          
+                  height: MediaQuery.of(context).size.height / 1.7,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage(
+                        'assets/images/fondot.png',
+                      ),
+                    ),
+                  ),
                 ),
-              
               ),
               Center(
-                child: Text(_ultimoTicket, 
-                style: TextStyle(
-                  fontSize: 45.0,
-                ),),
+                child: Text(
+                  _ultimoTicket,
+                  style: TextStyle(
+                    fontSize: 45.0,
+                  ),
+                ),
               )
             ],
-            ),  
+          ),
         ),
       ),
     );

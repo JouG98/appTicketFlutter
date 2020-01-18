@@ -6,7 +6,7 @@ import 'package:sistema_ticket/src/models/tickets.dart';
 
 class TicketsProvider {
 
-  String _url = 'http://192.168.137.1:3000/publico';
+  String _url = 'http://192.168.1.111:3000/publico';
   
     //oe mejor pon el video de fernando jajaj, anda a la carpeta
   
@@ -14,8 +14,7 @@ class TicketsProvider {
     final resp = await http.get(_url);
     final decodeData = json.decode(resp.body);
     final tickets = new Tickets.fromJsonList(decodeData);
-    print("hola.... ${tickets.tikets[0]}");
-    return [];
+    return tickets.items;
   }
 
 }
