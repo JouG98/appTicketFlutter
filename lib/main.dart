@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:sistema_ticket/pages/generarTicket.dart';
-import 'package:sistema_ticket/pages/home.dart';
-import 'package:sistema_ticket/pages/visualizarTickets.dart';
+import 'package:sistema_ticket/src/pages/generarTicket.dart';
+import 'package:sistema_ticket/src/pages/home.dart';
+import 'package:sistema_ticket/src/pages/ultimosT.dart';
+import 'package:sistema_ticket/src/pages/visualizarTickets.dart';
+import 'package:sistema_ticket/src/pages/visualizar.dart';
 
 void main() => runApp(MyApp());
 
@@ -12,9 +14,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       initialRoute: '/',
       routes: {
-        '/' : (context) => Home(),
-        'generar' : (context) => GenerarTicket(),
-        'visualizar' : (context) => VisualizarTickets(),
+        '/': (context) => Home(),
+        'generar': (context) => GenerarTicket(),
+        'visuG': (context) => Visualizar(),
+        'ultimosT': (context) => UltimosTickets(),
+        'visualizar': (context) => VisualizarTickets(),
       },
       debugShowCheckedModeBanner: false,
       title: 'TicketApp',

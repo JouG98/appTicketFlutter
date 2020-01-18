@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+import 'package:sistema_ticket/src/providers/tickets_providers.dart';
+
 
 class GenerarTicket extends StatefulWidget {
   GenerarTicket({Key key}) : super(key: key);
@@ -8,6 +11,7 @@ class GenerarTicket extends StatefulWidget {
 }
 
 class _GenerarTicketState extends State<GenerarTicket> {
+  String _nuevoTicket = 'GENERAR MI TICKET';
   @override
   Widget build(BuildContext context) {
     return Scaffold(

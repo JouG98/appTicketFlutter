@@ -1,31 +1,32 @@
 import 'package:flutter/material.dart';
+// import 'package:sistema_ticket/src/providers/tickets_providers.dart';
 
-class Home extends StatefulWidget {
-  Home({Key key}) : super(key: key);
+class Visualizar extends StatefulWidget {
+  Visualizar({Key key}) : super(key: key);
 
   @override
-  _HomeState createState() => _HomeState();
+  _VisualizarState createState() => _VisualizarState();
 }
 
-class _HomeState extends State<Home> {
+class _VisualizarState extends State<Visualizar> {
+
+  // String _vTickets = 'VISUALIZAR TICKETS';
+
   @override
   Widget build(BuildContext context) {
-
     double _height = MediaQuery.of(context).size.height;
-    print(_height);
-
     return Scaffold(
-      // appBar: AppBar(
-      //   title: Text("Sistema Ticket"),
-      //   backgroundColor: Colors.blue,
-      //   elevation: 0.0,
-      // ),
+      appBar: AppBar(
+        title: Text('Visualizar Tickets'),
+      ),
       body: Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
         decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('assets/images/bg.png'), fit: BoxFit.cover),
+            image: AssetImage('assets/images/bg.png'),
+            fit: BoxFit.cover,
+          ),
         ),
         child: Padding(
           padding: EdgeInsets.fromLTRB(20.0, 40.0, 20.0, 0.0),
@@ -51,7 +52,7 @@ class _HomeState extends State<Home> {
                             height: 10.0,
                           ),
                           Text(
-                            'Genera tu Ticket',
+                            'Vé los últimos Tickets',
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 20.0,
@@ -70,10 +71,10 @@ class _HomeState extends State<Home> {
                 ],
               ),
               Padding(
-                padding:  EdgeInsets.fromLTRB(70.0, 110.0, 70.0, 0.0),
+                padding: EdgeInsets.fromLTRB(70.0, 110.0, 70.0, 0.0),
                 child: GestureDetector(
                   onTap: () {
-                    Navigator.pushNamed(context, 'generar');
+                    Navigator.pushNamed(context, 'ultimosT');
                   },
                   child: Card(
                     elevation: 7.0,
@@ -85,7 +86,7 @@ class _HomeState extends State<Home> {
                       decoration: BoxDecoration(
                         image: DecorationImage(
                           image: AssetImage(
-                            'assets/images/generar.png',
+                            'assets/images/utimos.png',
                           ),
                           // fit: BoxFit.cover,
                         ),
@@ -95,8 +96,9 @@ class _HomeState extends State<Home> {
                 ),
               ),
               Padding(
-                padding: _height > 640 ? EdgeInsets.fromLTRB(70.0, 320.0, 70.0, 0.0) :
-                 EdgeInsets.fromLTRB(70.0, 280.0, 70.0, 0.0),
+                padding: _height > 640
+                    ? EdgeInsets.fromLTRB(70.0, 320.0, 70.0, 0.0)
+                    : EdgeInsets.fromLTRB(70.0, 280.0, 70.0, 0.0),
                 child: GestureDetector(
                   onTap: () {
                     Navigator.pushNamed(context, 'visualizar');
@@ -111,7 +113,7 @@ class _HomeState extends State<Home> {
                       decoration: BoxDecoration(
                         image: DecorationImage(
                           image: AssetImage(
-                            'assets/images/visualizacion.png',
+                            'assets/images/uG.png',
                           ),
                         ),
                       ),
